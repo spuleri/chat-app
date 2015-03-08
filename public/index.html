@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+<head>
+	<title>Chat</title>
+
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="style.css"/>
+	<!--<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script> -->
+
+	<script src="socket.io/socket.io.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src='lodash/dist/lodash.min.js'></script>
+	<script src='angular-google-maps/dist/angular-google-maps.min.js'></script>
+	<script src='angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+	<script src="main.js"></script>
+	<script src="routes.js"></script>
+
+</head>
+<body>
+	<h1 class="text-center">Node, Angular, Websocket, Location based chat ;)</h1>
+	<hr>
+	<!-- Adding ng-controller here also,
+	fixed the issue of changing states creating
+	a new scope :O -->
+	<div ng-controller="ChatCtrl">
+		<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT-->
+		<div ui-view></div>
+
+	</div>
+</body>
+</html>

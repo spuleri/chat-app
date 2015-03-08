@@ -1,0 +1,40 @@
+<div id="chat-page" class="col-sm-8 col-sm-offset-4" ng-controller="MapCtrl">
+	<div id="chat-area">
+		<h4> There are currently <span>{{numberUsers}}</span> users online </h4>
+		<p>Your location: 
+		<span ng-show="!exactLocation">{{locationMessage}}</span>
+		 <span ng-show="exactLocation">{{exactLocation}}</span>
+		</p>
+
+		<div id="chat-wrap" class="list-group">
+			<div class="list-group-item" ng-repeat="msg in msgs track by $index" ng-show="msg.message" my-scroll-directive>
+				<strong>{{msg.user}}:</strong> {{msg.message}}
+
+				<div class="text-muted">
+					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"
+					 tooltip-placement="right" tooltip="Click to toggle map" ng-click="showMap = !showMap"></span>
+					<small>near {{msg.exactPosition}}</small>
+<!-- 					<span class="glyphicon glyphicon-plus-sign" ng-click="showMap = true" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-minus-sign" ng-click="showMap = false" aria-hidden="true"></span> -->
+				</div>
+
+				<div id="map" ng-show="showMap">
+					<ui-gmap-google-map center='msg.map.center' zoom='msg.map.zoom'>
+						<ui-gmap-marker idKey='1' coords="msg.marker.coords"></ui-gmap-marker>
+					</ui-gmap-google-map>
+				</div>
+
+			</div>
+		</div>
+		
+		<div id="form-wrap">
+			<em><span ng-repeat="typer in usersTyping track by $index">{{typer}} is typing...</span></em>
+
+			<form ng-submit="sendMsg()" class="style-2">
+				<input type="text" ng-model="msg.txt" ng-keydown="userTyping()" placeholder="Type your message here..."/>
+				<!--<input type="submit"/>-->
+			</form>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "chat",
+  "version": "0.0.1",
+  "authors": [
+    "Sergio Puleri <spuleri@ufl.edu>"
+  ],
+  "description": "A real time chat app using node, socket.io, angular, and location",
+  "main": "public/index.html",
+  "keywords": [
+    "chat",
+    "socket.io",
+    "angular",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "spuleri.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.12.1",
+    "angular-google-maps": "~2.0.13",
+    "bootstrap": "~3.3.2",
+    "angular-ui-router": "~0.2.13",
+    "fastclick": ">=0.6.11",
+    "jquery-placeholder": "~2.0.7",
+    "jquery.cookie": "~1.4.0",
+    "modernizr": ">= 2.7.2"
+  }
+}
