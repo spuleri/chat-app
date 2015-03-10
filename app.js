@@ -4,7 +4,7 @@ var express = require('express'),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server);
 
-server.listen(8000);
+server.listen(process.env.PORT || 8000);
 
 //Express routing
 app.use(express.static(__dirname + '/public'));
