@@ -18,7 +18,7 @@
 					<span class="glyphicon glyphicon-minus-sign" ng-click="showMap = false" aria-hidden="true"></span> -->
 				</div>
 
-				<div id="map" ng-show="showMap">
+				<div id="map" ng-if="showMap">
 					<ui-gmap-google-map center='msg.map.center' zoom='msg.map.zoom'>
 						<ui-gmap-marker idKey='1' coords="msg.marker.coords"></ui-gmap-marker>
 					</ui-gmap-google-map>
