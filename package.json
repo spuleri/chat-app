@@ -1,9 +1,19 @@
 {
 	"name": "chat",
 	"version": "0.0.1",
-	"private": true,
+	"description": "A real time chat app using node, socket.io, angular, and location",
+	"main": "app,js",
+	"author": "Sergio Puleri",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/spuleri/chat-app.git"
+	},
+	"license": "MIT",
 	"dependencies": {
 		"express": "4.12.x",
 		"socket.io": "1.3.x"
+	},
+	"engines": {
+		"node": "0.10.x"
 	}
 }
