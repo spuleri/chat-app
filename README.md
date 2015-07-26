@@ -1,7 +1,7 @@
 # chat-app
-A real time chat app using [node](https://nodejs.org/), [socket.io](http://socket.io/), [angular](https://angularjs.org/), and [geolocation](http://www.w3schools.com/html/html5_geolocation.asp)
+A real time chat app using [node](https://nodejs.org/), [socket.io](http://socket.io/), [angular](https://angularjs.org/), and [geolocation](http://www.w3schools.com/html/html5_geolocation.asp) located [here](http://chat.spuleri.com/).
 
-Installation (soon to be hosted online)
+Installation 
 -----
 - Requirements: [npm](https://www.npmjs.com/) & [bower](http://bower.io/)
 - Clone the repo using `git clone *url*`  with the copied clone url to the right
